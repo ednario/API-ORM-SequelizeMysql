@@ -6,11 +6,12 @@ class PessoaController {
     try {
       const todasAsPessoas = await database.Pessoas.findAll();
       return res.status(200).json(todasAsPessoas);
-    } catch (err) {
-      return res.status(500).json(err.message);
+    } catch (error) {
+      return res.status(500).json(error.message);
     }
   }
 
+  // listagem de uma única pessoa
   static async pegaUmaPessoa(req, res) {
     const { id } = req.params;
     try {
@@ -19,7 +20,18 @@ class PessoaController {
       });
       return res.status(200).json(umaPessoa);
     } catch (error) {
-      return res.status(500).send(error);
+      return res.status(500).send(error.message);
+    }
+  }
+
+  // adiciona uma nova pessoa
+  static async criaPessoa(req, res) {
+    const novaPessoa = req.body;
+    try {
+      const novaPessoaCriada = await database.Pessoas.create(novaPessoa);
+      return res.status(200).json(novaPessoaCriada);
+    } catch (error) {
+      return res.status(500).send(error.message);
     }
   }
 }
