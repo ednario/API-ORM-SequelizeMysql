@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING,
       role: DataTypes.STRING,
     },
-    {},
+    {}
   );
   Pessoas.associate = function (models) {};
   return Pessoas;
