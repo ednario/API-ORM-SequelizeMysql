@@ -1,7 +1,7 @@
 {
   "name": "orm-sequelize",
-  "version": "1.0.1",
-  "description": "curso de ORM - Alura",
+  "version": "1.1.0",
+  "description": "crud para escolas de inglês",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon api/index.js",
