@@ -16,6 +16,7 @@
     "import/no-dynamic-require": "off",
     "func-names": "off",
     "no-unused-vars":"off",
+    "global-require":"off",
     "prettier/prettier": "error"
   },
   "plugins": [
